@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexOra</title>
+    <link rel="icon" href="assets/img/fav.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <!-- -- Bootstrap File LINK --  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- -- Custom JS Link -- -->
+     <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html"><img src="assets/img/logo.png" alt="NexOra Logo"></a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <!-- Center Nav Links -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav ms-lg-5 ps-lg-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">VOD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">LIVE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PLAN</a>
+                    </li>
+                </ul>
+                <!-- Right Side -->
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="search-btn">
+                        <a href="javascript:void(0)"><i class="bi bi-search"></i></a>
+                    </div>
+                    <button class="get-started">GET STARTED</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- -- main content -- -->
+    <main class="mt-5">
+        <section class="home">
+            <div class="container">
+                <div class="d-flex justify-content-center flex-column">
+                    <img src="assets/img/logo-2.png" alt="Logo">
+                    <form action="#">
+                        <div class="search-box">
+                            <input type="text" placeholder="Search  your content here">
+                            <i class="bi bi-search"></i>
+                        </div>
+
+                    </form>
+                    <!-- Feature List -->
+                    <div class="row features mt-4">
+                        <div class="col-lg-6 feature-item">
+                            <i class="bi bi-check-circle"></i>
+                            <span>Connect several devices at once</span>
+                        </div>
+                        <div class="col-lg-6 feature-item">
+                            <i class="bi bi-check-circle"></i>
+                            <span>500k new and old movies</span>
+                        </div>
+                        <div class="col-lg-6 feature-item">
+                            <i class="bi bi-check-circle"></i>
+                            <span>25,000 worldwide channels 4K</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <div class="container-fluid mt-lg-5 pt-lg-5 px-lg-5">
+            <div class="row align-items-center">
+                <!-- Left Content -->
+                <div class="col-lg-6 order-lg-0 order-1">
+                    <h5 class="text-primary mb-3">WHO WE ARE</h5>
+                    <h2 class="fw-bold mb-4">
+                        We are proud to offer the best <br />
+                        IP TV subscriptions
+                    </h2>
+                    <p class="text-white">
+                        Our Best IPTV subscriptions offer high-quality streaming, with no buffering or lagging. You can easily navigate through channels using our user-friendly interface and enjoy a seamless experience.
+                    </p>
+
+                    <ul class="feature-list list-unstyled">
+                        <li>
+                            <i class="bi bi-check-circle me-2"></i> 
+                            <span>Connect several devices at once</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle me-2"></i>
+                            <span>Gig download speeds available everywhere</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle me-2"></i>
+                            <span>Wall-to-wall WIFI connection</span>
+                        </li>
+                    </ul>
+
+                    <button class=" btn btn-primary px-4 py-3 fs-6 mt-3">Subscribe Now</button>
+                </div>
+
+                <!-- Right Image / Video -->
+                <div class="col-lg-6 mt-4 mt-md-0 mb-5 mb-lg-0  order-lg-1 order-0">
+                    <div class="video-thumbnail">
+                        <img src="assets/img/video-1.png" alt="Kanava Image" />
+                        <a href="#" class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid mt-5 pt-lg-5 pt-3 px-lg-5">
+            <div class="title text-center">
+                <p class="text-primary">Enjoy your Time</p>
+                <h2 class="w-50 m-auto fw-bold">Enjoy watching now Movies, Series, Shows, Anime and More</h2>
+            </div>
+
+            <div class="owl-carousel owl-theme mt-lg-5 mt-3" id="indexPageCalOne">
+                <!-- Card 1 -->
+                <div class="item">
+                    <div class="movie-card">
+                        <img src="assets/img/movie-poster/10.png" alt="Movie 1">
+
+                        <div class="movie-overlay">
+                            <a href="" class="movie-play-btn">
+                                <i class="bi bi-play-fill"></i>
+                            </a>
+                            <div class="add-to-wishlist px-3 pb-1 d-flex justify-content-between">
+                                <a href="javascript:void(0)">Add to Wishlist</a>
+                                <a href="javascript:void(0)" class="icon"><i class="bi bi-share-fill text-primary"></i></a>
+                            </div>
+                            <div class="content">
+                                <h5>Title is here Just Demo Text</h5>
+                                <div class="d-flex justify-content-between">
+                                    <p>Release Date: 01 May 2025</p>
+                                    <p>2hr 10min</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="item">
+                    <div class="movie-card">
+                        <img src="assets/img/movie-poster/11.png" alt="Movie 2">
+                        
+                        <div class="movie-overlay">
+                            <a href="" class="movie-play-btn">
+                                <i class="bi bi-play-fill"></i>
+                            </a>
+                            <div class="add-to-wishlist px-3 pb-1 d-flex justify-content-between">
+                                <a href="javascript:void(0)">Add to Wishlist</a>
+                                <a href="javascript:void(0)" class="icon"><i class="bi bi-share-fill text-primary"></i></a>
+                            </div>
+                            <div class="content">
+                                <h5>Title is here Just Demo Text</h5>
+                                <div class="d-flex justify-content-between">
+                                    <p>Release Date: 01 May 2025</p>
+                                    <p>2hr 10min</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="item">
+                    <div class="movie-card">
+                        <img src="assets/img/movie-poster/12.png" alt="Movie 3">
+
+                        <div class="movie-overlay">
+                            <a href="" class="movie-play-btn">
+                                <i class="bi bi-play-fill"></i>
+                            </a>
+                            <div class="add-to-wishlist px-3 pb-1 d-flex justify-content-between">
+                                <a href="javascript:void(0)">Add to Wishlist</a>
+                                <a href="javascript:void(0)" class="icon"><i class="bi bi-share-fill text-primary"></i></a>
+                            </div>
+                            <div class="content">
+                                <h5>Title is here Just Demo Text</h5>
+                                <div class="d-flex justify-content-between">
+                                    <p>Release Date: 01 May 2025</p>
+                                    <p>2hr 10min</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="item">
+                    <div class="movie-card">
+                        <img src="assets/img/movie-poster/4.png" alt="Movie 4">
+
+                        <div class="movie-overlay">
+                            <a href="" class="movie-play-btn">
+                                <i class="bi bi-play-fill"></i>
+                            </a>
+                            <div class="add-to-wishlist px-3 pb-1 d-flex justify-content-between">
+                                <a href="javascript:void(0)">Add to Wishlist</a>
+                                <a href="javascript:void(0)" class="icon"><i class="bi bi-share-fill text-primary"></i></a>
+                            </div>
+                            <div class="content">
+                                <h5>Title is here Just Demo Text</h5>
+                                <div class="d-flex justify-content-between">
+                                    <p>Release Date: 01 May 2025</p>
+                                    <p>2hr 10min</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrap mt-4 mt-lg-5 text-center">
+                <p>Everything you need to enjoy your time</p>
+                <button class="btn btn-primary px-4" style="border-radius: 9px;">Get it Now</button>
+            </div>
+
+        </div>
+
+        <section class="hero-section mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-9 col-12 hero-content">
+                        <p class="text-primary mb-2">Top Rated Today</p>
+                        <h1 class="hero-title">FIGHT FOR SURVIVE</h1>
+                        <h2 class="hero-subtitle">Supper Hit Movie</h2>
+                        <p class="hero-text mb-5">
+                        Lorem Ipsum is simply dummy text of the printing and <br> typesetting industry. Lorem Ipsum has been the <br> industry's standard dummy text. 
+                        <a href="#" class="text-info">Read More</a>
+                        </p>
+                        <a href="#" class="btn btn-primary px-3 py-2">Watch Now</a>
+                        <a href="#" class="btn btn-outline-primary px-3 py-2 ms-3 text-light">See Trailer</a>
+                    </div>
+                </div>
+            </div> 
+        </section>
+
+        <div class="container my-5 position-relative">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="section-title">Trending Movies</h2>
+            </div>
+
+            <div class="owl-carousel owl-theme movie-poster-cal">
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/2.png" alt="Movie 1">
+                    </a>
+                </div>
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/3.png" alt="Movie 2">
+                    </a>
+                </div>
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/4.png" alt="Movie 3">
+                    </a>
+                </div>
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/5.png" alt="Movie 4">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-5 position-relative">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="section-title">New Release  Movies</h2>
+            </div>
+
+            <div class="owl-carousel owl-theme movie-poster-cal">
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/9.png" alt="Movie 1">
+                    </a>
+                </div>
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/6.png" alt="Movie 2">
+                    </a>
+                </div>
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/7.png" alt="Movie 3">
+                    </a>
+                </div>
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/8.png" alt="Movie 4">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <section class="py-5 text-white">
+            <div class="container">
+                <h2 class="fw-bold mb-3">We Provide you streaming experience across various devices.</h2>
+                <p class="mb-5 text-secondary">With StreamVibe, you can enjoy your favorite movies and TV shows anytime, anywhere. Our platform is designed to be <br> compatible with a wide range of devices, ensuring that you never miss a moment of entertainment.</p>
+                <div class="row">
+                    <div class="col-12 col-lg-4 col-md-6 mb-3">
+                        <div class="icon-card d-flex align-items-center gap-3">
+                            <div class="ms-4">
+                                <img src="assets/img/icon/mobile.png" alt="..." class="img-fluid">
+                            </div>
+                            <h5 class="fw-semibold">Smartphones</h5>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-6 mb-3">
+                        <div class="icon-card d-flex align-items-center gap-3">
+                            <div class="ms-4">
+                                <img src="assets/img/icon/computer.png" alt="..." class="img-fluid">
+                            </div>
+                            <h5 class="fw-semibold">Computer</h5>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-6 mb-3">
+                        <div class="icon-card d-flex align-items-center gap-3">
+                            <div class="ms-4">
+                                <img src="assets/img/icon/tv.png" alt="..." class="img-fluid">
+                            </div>
+                            <h5 class="fw-semibold">Smart TV</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-black text-white">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Review Card -->
+                    <div class="col-12 col-lg-4 col-md-6 mb-3">
+                        <div class="review-card">
+                            <h5 class="fw-semibold mb-3">Smooth Experience</h5>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                            <div class="text-warning mb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div style="background: #1F1E1E; height: 45px; width: 45px;" class="position-relative text-center me-2 rounded-3">
+                                    <img src="assets/img/profile/girl.png" class="rounded-circle me-2" alt="User" width="30" height="30">
+                                </div>
+                                <div>
+                                    <strong>David Smith</strong><br>
+                                    <small class="text-secondary">Feature Availed</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-lg-4 col-md-6 mb-3">
+                        <div class="review-card">
+                            <h5 class="fw-semibold mb-3">Smooth Experience</h5>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                            <div class="text-warning mb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div style="background: #1F1E1E; height: 45px; width: 45px;" class="position-relative text-center me-2 rounded-3">
+                                    <img src="assets/img/profile/girl.png" class="rounded-circle me-2" alt="User" width="30" height="30">
+                                </div>
+                                <div>
+                                    <strong>David Smith</strong><br>
+                                    <small class="text-secondary">Feature Availed</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 col-md-6 mb-3">
+                        <div class="review-card">
+                            <h5 class="fw-semibold mb-3">Smooth Experience</h5>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                            <div class="text-warning mb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div style="background: #1F1E1E; height: 45px; width: 45px;" class="position-relative text-center me-2 rounded-3">
+                                    <img src="assets/img/profile/girl.png" class="rounded-circle me-2" alt="User" width="30" height="30">
+                                </div>
+                                <div>
+                                    <strong>David Smith</strong><br>
+                                    <small class="text-secondary">Feature Availed</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <div class="row gy-5">
+                <!-- Logo & Address -->
+                <div class="col-12 col-lg-4">
+                    <div>
+                        <img src="assets/img/logo.png" alt="NexOra Logo" style="max-width: 180px;">
+                        <p class="mt-4">Company Address here Address<br>line 1/2, example here</p>
+                    </div>
+                    <div>
+                        <h6 class="mt-4">Social Media</h6>
+                        <div class="social-icons d-flex gap-2 mt-3">
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-twitter"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movies -->
+                <div class="col-6 col-lg-2">
+                    <h6>Movies</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Upcoming</a></li>
+                        <li class="mb-2"><a href="#">Trending</a></li>
+                        <li class="mb-2"><a href="#">New Release</a></li>
+                        <li><a href="#">Popular</a></li>
+                    </ul>
+                </div>
+
+                <!-- Shows -->
+                <div class="col-6 col-lg-2">
+                    <h6>Shows</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Trending</a></li>
+                        <li class="mb-2"><a href="#">New Release</a></li>
+                        <li><a href="#">Popular</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-6 col-lg-2">
+                    <h6>Support</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Subscription -->
+                <div class="col-6 col-lg-2">
+                    <h6>Subscription</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Plans</a></li>
+                        <li><a href="#">Features</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center mt-5">
+                <p>©2025 NexOra, All Rights Reserved</p>
+                <div class="mt-3 mt-md-0">
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

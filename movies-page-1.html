@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexOra</title>
+    <link rel="icon" href="assets/img/fav.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <!-- -- Bootstrap File LINK --  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- -- Custom JS Link -- -->
+     <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html"><img src="assets/img/logo.png" alt="NexOra Logo"></a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <!-- Center Nav Links -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav ms-lg-5 ps-lg-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">VOD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">LIVE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PLAN</a>
+                    </li>
+                </ul>
+                <!-- Right Side -->
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="search-btn">
+                        <a href="javascript:void(0)"><i class="bi bi-search"></i></a>
+                    </div>
+                    <div class="profile-btn">
+                        <img src="assets/img/profile/user.png" alt="">
+                        <h6 class="mt-1">Jhone</h6>
+                        <a href=""><i class="bi bi-three-dots-vertical"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- -- main content -- -->
+    <main class="movies-page-1">
+
+        <section class="bg-banar"></section>
+
+        <div class="row py-5 me-3">
+            <div class="col-12 d-flex justify-content-end">
+                <form action="" class="position-relative">
+                    <i class="bi bi-search"></i>
+                    <input type="search" placeholder="Search" class="form-control">
+                    <input type="submit" class="btn btn-primary" value="Search">
+                </form>
+
+                <!-- Filter Button -->
+                <div class="dropdown">
+                    <button class="btn btn-filter dropdown-toggle" type="button" id="dropdownFilter" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-sliders text-white"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownFilter">
+
+                        <!-- Item 1 -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Main Category Number 01</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Sub Category Number 01</a></li>
+                                <li><a class="dropdown-item" href="#">Sub Category Number 02</a></li>
+                                <li><a class="dropdown-item" href="#">Sub Category Number 03</a></li>
+                                <li><a class="dropdown-item" href="#">Sub Category Number 04</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Item 2 -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Main Category Number 02</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Sub Category Number 01</a></li>
+                                <li><a class="dropdown-item" href="#">Sub Category Number 02</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Item 3 -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Main Category Number 03</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Sub Category Number 01</a></li>
+                                <li><a class="dropdown-item" href="#">Sub Category Number 02</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Item 4 -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Main Category Number 04</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Sub Category Number 01</a></li>
+                                <li><a class="dropdown-item" href="#">Sub Category Number 02</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <div class="section-header">
+                <h4>Trending  Movies</h4>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="owl-carousel owl-theme movies-serice-cal">
+
+                <!-- Movie Item 1 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/13.png" alt="RAM">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 30min</span>
+                        <span><i class="bi bi-eye"></i> 2K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 2 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/14.png" alt="Kanguva 1">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 57min</span>
+                        <span><i class="bi bi-eye"></i> 1.5K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 3 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/15.png" alt="Kanguva 2">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 2h 10min</span>
+                        <span><i class="bi bi-eye"></i> 1.8K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 4 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/16.png" alt="Kanguva 3">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 2h 20min</span>
+                        <span><i class="bi bi-eye"></i> 3K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 5 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/17.png" alt="Veeramallu">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 42min</span>
+                        <span><i class="bi bi-eye"></i> 5K</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <div class="section-header">
+                <h4>New Release Movies</h4>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="owl-carousel owl-theme movies-serice-cal">
+
+                <!-- Movie Item 1 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/18.png" alt="RAM">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 30min</span>
+                        <span><i class="bi bi-eye"></i> 2K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 2 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/14.png" alt="Kanguva 1">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 57min</span>
+                        <span><i class="bi bi-eye"></i> 1.5K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 3 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/15.png" alt="Kanguva 2">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 2h 10min</span>
+                        <span><i class="bi bi-eye"></i> 1.8K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 4 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/19.png" alt="Kanguva 3">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 2h 20min</span>
+                        <span><i class="bi bi-eye"></i> 3K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 5 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/17.png" alt="Veeramallu">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 42min</span>
+                        <span><i class="bi bi-eye"></i> 5K</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <div class="section-header">
+                <h4>Top Rated Movies</h4>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="owl-carousel owl-theme movies-serice-cal">
+
+                <!-- Movie Item 1 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/20.png" alt="RAM">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 30min</span>
+                        <span><i class="bi bi-eye"></i> 2K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 2 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/14.png" alt="Kanguva 1">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 57min</span>
+                        <span><i class="bi bi-eye"></i> 1.5K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 3 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/15.png" alt="Kanguva 2">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 2h 10min</span>
+                        <span><i class="bi bi-eye"></i> 1.8K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 4 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/19.png" alt="Kanguva 3">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 2h 20min</span>
+                        <span><i class="bi bi-eye"></i> 3K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 5 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/17.png" alt="Veeramallu">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 42min</span>
+                        <span><i class="bi bi-eye"></i> 5K</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <div class="section-header">
+                <h4>Popular Movies</h4>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="owl-carousel owl-theme movies-serice-cal">
+
+                <!-- Movie Item 1 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/21.png" alt="RAM">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 30min</span>
+                        <span><i class="bi bi-eye"></i> 2K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 2 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/14.png" alt="Kanguva 1">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 57min</span>
+                        <span><i class="bi bi-eye"></i> 1.5K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 3 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/15.png" alt="Kanguva 2">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 2h 10min</span>
+                        <span><i class="bi bi-eye"></i> 1.8K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 4 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/19.png" alt="Kanguva 3">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 2h 20min</span>
+                        <span><i class="bi bi-eye"></i> 3K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 5 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/17.png" alt="Veeramallu">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 42min</span>
+                        <span><i class="bi bi-eye"></i> 5K</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <div class="section-header">
+                <h4>New Release Series</h4>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="owl-carousel owl-theme movies-serice-cal">
+
+                <!-- Movie Item 1 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/22.png" alt="RAM">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 30min</span>
+                        <span><i class="bi bi-eye"></i> 2K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 2 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/14.png" alt="Kanguva 1">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 57min</span>
+                        <span><i class="bi bi-eye"></i> 1.5K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 3 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/23.png" alt="Kanguva 2">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 2h 10min</span>
+                        <span><i class="bi bi-eye"></i> 1.8K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 4 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/19.png" alt="Kanguva 3">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 2h 20min</span>
+                        <span><i class="bi bi-eye"></i> 3K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 5 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/17.png" alt="Veeramallu">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 42min</span>
+                        <span><i class="bi bi-eye"></i> 5K</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <div class="section-header">
+                <h4>Popular Series</h4>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="owl-carousel owl-theme movies-serice-cal">
+
+                <!-- Movie Item 1 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/24.png" alt="RAM">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 30min</span>
+                        <span><i class="bi bi-eye"></i> 2K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 2 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/14.png" alt="Kanguva 1">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 57min</span>
+                        <span><i class="bi bi-eye"></i> 1.5K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 3 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/23.png" alt="Kanguva 2">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 2h 10min</span>
+                        <span><i class="bi bi-eye"></i> 1.8K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 4 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/16.png" alt="Kanguva 3">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 2h 20min</span>
+                        <span><i class="bi bi-eye"></i> 3K</span>
+                    </div>
+                </div>
+
+                <!-- Movie Item 5 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/movie-poster/17.png" alt="Veeramallu">
+                    </a>
+                    <div class="movie-info">
+                        <span><i class="bi bi-clock"></i> 1h 42min</span>
+                        <span><i class="bi bi-eye"></i> 5K</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    
+    <footer>
+        <div class="container">
+            <div class="row gy-5">
+                <!-- Logo & Address -->
+                <div class="col-12 col-lg-4" id="midDevice">
+                    <div>
+                        <img src="assets/img/logo.png" alt="NexOra Logo" style="max-width: 180px;">
+                        <p class="mt-4">Company Address here Address<br>line 1/2, example here</p>
+                    </div>
+                    <div>
+                        <h6 class="mt-4">Social Media</h6>
+                        <div class="social-icons d-flex gap-2 mt-3">
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-twitter"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movies -->
+                <div class="col-6 col-lg-2">
+                    <h6>Movies</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Upcoming</a></li>
+                        <li class="mb-2"><a href="#">Trending</a></li>
+                        <li class="mb-2"><a href="#">New Release</a></li>
+                        <li><a href="#">Popular</a></li>
+                    </ul>
+                </div>
+
+                <!-- Shows -->
+                <div class="col-6 col-lg-2">
+                    <h6>Shows</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Trending</a></li>
+                        <li class="mb-2"><a href="#">New Release</a></li>
+                        <li><a href="#">Popular</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-6 col-lg-2">
+                    <h6>Support</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Subscription -->
+                <div class="col-6 col-lg-2">
+                    <h6>Subscription</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Plans</a></li>
+                        <li><a href="#">Features</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center mt-5">
+                <p>©2025 NexOra, All Rights Reserved</p>
+                <div class="mt-3 mt-md-0">
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
