@@ -27,6 +27,21 @@ $(document).ready(function () {
     }
   });
 
+  // Owl Carousel for Now live part
+  $(".live-now-cal").owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: true,
+    dots: false,
+    navText: ['<span>&#8249;</span>', '<span>&#8250;</span>'],
+    responsive: {
+      0: { items: 2 },
+      576: { items: 2 },
+      768: { items: 3 },
+      992: { items: 5 }
+    }
+  });
+
   // Owl Carousel 03
   $(".movies-serice-cal").owlCarousel({
     loop: true,
@@ -151,3 +166,7 @@ $(document).ready(function () {
     video.muted = !video.muted;
     volumeToggle.className = video.muted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
   });
+
+  // password icon - show 
+
+  

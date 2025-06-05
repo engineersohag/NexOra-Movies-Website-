@@ -51,11 +51,227 @@
                         <a href="javascript:void(0)"><i class="bi bi-search"></i></a>
                         <input type="searcch" placeholder="search" class="form-control d-lg-none">
                     </div>
-                    <button class="get-started mt-3 mt-lg-0">GET STARTED</button>
+                    <button class="get-started mt-3 mt-lg-0" data-bs-toggle="modal" data-bs-target="#signupModal">GET STARTED</button>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- -- Modal Part Start --  -->
+
+    <!-- Create Account Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content login-modal bg-dark text-white rounded-4 p-4 border-0">
+                <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h4 class="text-center mb-2">Create A New Account</h4>
+                <p class="text-center text-muted mb-4" style="font-size: 0.85rem;">Enter following details to Signup.</p>
+
+                <div class="row g-3 mb-3">
+                    <div class="col-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control bg-secondary text-white border-0" id="firstName" placeholder="Name here">
+                            <label for="firstName"><i class="bi bi-person-fill"></i> First Name</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control bg-secondary text-white border-0" id="lastName" placeholder="Last Name">
+                        <label for="lastName"><i class="bi bi-person-fill"></i> Last Name</label>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control bg-secondary text-white border-0" id="email" placeholder="Email">
+                    <label for="email"><i class="bi bi-envelope-fill"></i> Email</label>
+                </div>
+
+                <div class="input-group mb-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://flagcdn.com/us.svg" alt="US Flag" style="width: 20px; height: 14px;"> +1
+                    </button>
+                    <ul class="dropdown-menu">
+                    <li class="nav-item"><a class="nav-link text-white" href="#">+44 UK</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">+91 IN</a></li>
+                    </ul>
+                    <input type="tel" class="form-control bg-secondary text-white border-0" placeholder="Enter Phone">
+                </div>
+
+                <div class="form-floating mb-3 position-relative">
+                    <input type="password" class="form-control bg-secondary text-white border-0" id="password" placeholder="Password">
+                    <label for="password"><i class="bi bi-lock-fill"></i> Password</label>
+                    <i class="bi bi-eye-slash-fill position-absolute top-50 end-0 translate-middle-y me-3 text-white"></i>
+                </div>
+
+                <div class="form-floating mb-3 position-relative">
+                    <input type="password" class="form-control bg-secondary text-white border-0" id="confirmPassword" placeholder="Confirm Password">
+                    <label for="confirmPassword"><i class="bi bi-lock-fill"></i> Password</label>
+                    <i class="bi bi-eye-slash-fill position-absolute top-50 end-0 translate-middle-y me-3 text-white"></i>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="termsCheck" checked>
+                    <label class="form-check-label" for="termsCheck">
+                    By clicking register you agree to our 
+                    <a href="#" class="text-white text-decoration-none">Terms and Conditions of Use</a>
+                    </label>
+                </div>
+
+                <button class="btn btn-primary w-100 rounded-pill py-2" data-bs-toggle="modal" data-bs-target="#loginModal">Signup</button>
+
+                <div class="d-flex align-items-center my-4">
+                    <hr class="flex-grow-1 text-secondary">
+                    <span class="mx-2 text-muted">Sign Up With</span>
+                    <hr class="flex-grow-1 text-secondary">
+                </div>
+
+                <div class="d-flex justify-content-center gap-3 social-icons">
+                    <button class="btn"><i class="bi bi-google"></i></button>
+                    <button class="btn"><i class="bi bi-facebook"></i></button>
+                    <button class="btn"><i class="bi bi-apple"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal for log in -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+                <div class="login-modal mx-auto w-100">
+                    <button class="close-btn" data-bs-dismiss="modal"><i class="bi bi-x"></i></button>
+
+                    <h4 class="text-center fw-bold">Welcome to <span style="color: #fff;">NexOra</span></h4>
+                    <p class="text-center mb-5 text-muted" style="font-size: 0.9rem;">Enter following details to login.</p>
+
+                    <div class="form-group">
+                        <i class="bi bi-envelope-fill"></i>
+                        <input type="email" class="form-control" placeholder="Email">
+                        <small class="d-block text-end text-muted mt-1" style="font-size: 0.8rem;"><a href="" class="text-white">Forgot Email?</a></small>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="bi bi-lock-fill"></i>
+                        <input type="password" class="form-control" placeholder="Password">
+                        <small class="d-block text-end text-muted mt-1" style="font-size: 0.8rem;"  data-bs-toggle="modal" data-bs-target="#forgetPassModal"><a href="javascript:void(0)" class="text-white">Forgot Password?</a></small>
+                        <i class="bi bi-eye-slash-fill pass-icon"></i>
+                    </div>
+
+                    <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                    </div>
+
+                    <button class="btn btn-login">Login</button>
+
+                    <hr class="text-secondary my-4">
+
+                    <div class="text-center mb-2">Continue Sign In With</div>
+                    <div class="d-flex justify-content-center gap-3 social-icons">
+                        <button class="btn"><i class="bi bi-google"></i></button>
+                        <button class="btn"><i class="bi bi-facebook"></i></button>
+                        <button class="btn"><i class="bi bi-apple"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for forget passowrd -->
+    <div class="modal fade" id="forgetPassModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+                <div class="login-modal mx-auto w-100">
+                    <button class="close-btn" data-bs-dismiss="modal"><i class="bi bi-x"></i></button>
+
+                    <h4 class="text-center">Forgot Password?</h4>
+                    <p class="text-center mb-5 text-muted" style="font-size: 0.9rem;">To reset your password, please enter the email address associated with your Malooz TV account.</p>
+
+                    <div class="form-group">
+                        <i class="bi bi-envelope-fill"></i>
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+
+                    <button class="btn btn-login" data-bs-toggle="modal" data-bs-target="#OTPVerify">Send Reset Email</button> 
+                    <!-- it's for testing 'data-bs-toggle="modal" data-bs-target="#forgetPassModal"' backend woring time just remove it-->
+
+                    <br><br><br>
+
+                    <div class="text-center mb-2 text-muted" style="font-size: 0.9rem;"><span class="text-white">Note:</span> If you haven't received the link, please retry or feel free to contact us.</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- OTP Verification Modal -->
+    <div class="modal fade" id="OTPVerify" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered px-4">
+            <div class="modal-content bg-dark text-white rounded-4 p-4 border-0">
+                <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <h4 class="text-center mb-2">OTP Verification</h4>
+                <p class="text-center text-muted" style="font-size: 0.8rem;">
+                    We've sent verification code on: 
+                    <span class="text-white">+1 (555) 987-6543</span>
+                </p>
+
+                <div class="d-flex justify-content-center gap-3 my-4">
+                    <input type="text" class="form-control text-center otp-input" maxlength="1">
+                    <input type="text" class="form-control text-center otp-input" maxlength="1">
+                    <input type="text" class="form-control text-center otp-input" maxlength="1">
+                    <input type="text" class="form-control text-center otp-input" maxlength="1">
+                </div>
+
+                <button class="btn btn-primary w-100 rounded-pill py-2" data-bs-toggle="modal" data-bs-target="#newPassword">Verify</button>
+                <!-- it's for testing 'data-bs-toggle="modal" data-bs-target="#newPassword"' backend woring time just remove it-->
+
+                <div class="text-center mt-5 text-muted" style="font-size: 0.85rem;">
+                    Did not get the OTP?
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
+                    <span class="text-muted" style="font-size: 0.8rem;">00:30</span>
+                    <a href="#" class="text-decoration-underline" style="font-size: 0.85rem;">Re-send OTP</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal for New Passowrd -->
+    <div class="modal fade" id="newPassword" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog py-4 modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+                <div class="login-modal mx-auto w-100">
+                    <button class="close-btn" data-bs-dismiss="modal"><i class="bi bi-x"></i></button>
+
+                    <h4 class="text-center fw-bold">Create New Password</h4>
+                    <p class="text-center mb-5 text-muted" style="font-size: 0.9rem;">Enter following details to login.</p>
+
+                    <div class="form-group">
+                        <i class="bi bi-lock-fill"></i>
+                        <input type="password" class="form-control" placeholder="New Password">
+                        <i class="bi bi-eye-slash-fill pass-icon"></i>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="bi bi-lock-fill"></i>
+                        <input type="password" class="form-control" placeholder="Confirm Password">
+                        <i class="bi bi-eye-slash-fill pass-icon"></i>
+                    </div>
+
+                    <button class="btn btn-login">Save</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -- Modal Part End --  -->
 
     <!-- -- main content -- -->
     <main class="mt-5">

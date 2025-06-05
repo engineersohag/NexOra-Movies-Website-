@@ -658,6 +658,132 @@ input[type="range"].progress::-webkit-slider-thumb {
     box-shadow: none;
 }
 
+/* for login modal  */
+
+/* Blur Background Overlay */
+    .modal-backdrop.show {
+      backdrop-filter: blur(5px);
+    }
+
+    .login-modal {
+      background-color: #1e1e1e;
+      border-radius: 15px;
+      padding: 30px;
+      position: relative;
+    }
+    .modal-content{
+        background-color: #1e1e1e !important;
+        border-radius: 15px !important;
+    }
+
+    .login-modal .form-control {
+      background-color: #2d2d2d !important;
+      border: 1px solid #444;
+      color: #fff;
+      padding-left: 40px;
+    }
+
+    .login-modal .form-control:focus {
+      border-color: #007bff;
+      box-shadow: none;
+    }
+
+    .login-modal .form-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .login-modal .form-group input{
+        border-radius: 18px;
+    }
+
+    .login-modal .form-group i {
+      position: absolute;
+      top: 32%;
+      left: 12px;
+      transform: translateY(-50%);
+      color: #aaa;
+    }
+    #forgetPassModal .form-group i,
+    #newPassword .form-group i,
+    #newPassword .form-group i.pass-icon{
+        top: 50%;
+    }
+    .login-modal .form-group i.pass-icon {
+      position: absolute;
+      top: 32%;
+      left: 92%;
+      transform: translateY(-50%);
+      color: #aaa;
+      cursor: pointer;
+    }
+
+    .login-modal .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .login-modal .btn-login {
+      background-color: #207cff;
+      border: none;
+      border-radius: 30px;
+      width: 100%;
+      padding: 10px 0;
+      color: white;
+    }
+
+    .social-icons i {
+      font-size: 20px;
+    }
+
+    .social-icons .btn {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: #2d2d2d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    .input-group .btn-secondary{
+        background: #2d2d2d !important;
+        border: none;
+    }
+    .input-group .btn-secondary:focus{
+        box-shadow: none;
+    }
+
+    @media (max-width: 576px) {
+      .login-modal {
+        padding: 20px;
+      }
+    }
+
+ /* <!-- OTP input field styling --> */
+  .otp-input {
+    width: 50px;
+    height: 50px;
+    border-radius: 0.5rem;
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    color: white;
+    font-size: 1.25rem;
+  }
+
+  .otp-input:focus {
+    background-color: #1f1f1f;
+    color: #fff;
+    border-color: #0d6efd;
+    box-shadow: none;
+  }
+
+
 
 footer {
     background: #0d0d0d;
