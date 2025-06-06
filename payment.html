@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexOra</title>
+    <link rel="icon" href="assets/img/fav.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <!-- -- Bootstrap File LINK --  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- -- Custom JS Link -- -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .modal-content {
+      background: #111;
+      border-radius: 20px;
+      padding: 30px;
+    }
+    .modal-header {
+      border-bottom: none;
+    }
+    .modal-header .btn-close {
+      filter: invert(1);
+    }
+    .features span {
+      font-size: 13px;
+      margin-right: 15px;
+      color: #bbb;
+    }
+    .plan-card {
+      background: #131517;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: .3s;
+      position: relative;
+    }
+    .plan-card.active {
+      color: #fff;
+    }
+    .plan-card.active .plan-card-header{
+        color: #000;
+    }
+    .plan-card h6 {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .plan-card .price {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      padding: 20px;
+    }
+    .plan-card small, .plan-card del {
+      color: #999;
+    }
+    .plan-card .badge {
+      background: #007bff;
+      font-size: 12px;
+      border-radius: 8px;
+      padding: 3px 8px;
+      margin-left: 5px;
+    }
+    .plan-card input {
+      display: none;
+    }
+    
+    .continue-btn {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 8px 80px;
+      border-radius: 30px;
+      font-size: 16px;
+      transition: .3s;
+    }
+    .continue-btn:hover {
+      background: #0069d9;
+    }
+    @media(max-width: 576px) {
+      .plan-card {
+        margin-bottom: 12px;
+      }
+    }
+    #planModal .text-secondary{
+        font-size: 12px;
+        margin-top: -15px;
+        margin-bottom: 35px !important;
+    }
+    
+    .plan-card-header {
+      background: #2a2a2a;
+      border-radius: 8px 8px 0 0;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: #d1d1d1;
+    }
+    .price {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 20px 0 10px;
+    }
+    .plan-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #999;
+      padding: 20px;
+    }
+    .radio-indicator {
+      width: 18px;
+      height: 18px;
+      font-size: 12px;
+      background: #484A4B;
+      border-radius: 50%;
+    }
+    .radio-indicator.active {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .plan-card.active .plan-card-header{
+        background: #3396FF;
+    }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html"><img src="assets/img/logo.png" alt="NexOra Logo"></a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <!-- Center Nav Links -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav ms-lg-5 ps-lg-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="movies-page-1.html">VOD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="movies-page-3.html">LIVE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="javascript:void(0)"  data-bs-toggle="modal" data-bs-target="#planModal">PLAN</a>
+                    </li>
+                </ul>
+                <!-- Right Side -->
+                <div class="d-flex align-items-center justify-content-center flex-lg-row flex-column">
+                    <div class="search-btn">
+                        <a href="javascript:void(0)"><i class="bi bi-search"></i></a>
+                        <input type="searcch" placeholder="search" class="form-control d-lg-none">
+                    </div>
+                    <div class="profile-btn mt-3 mt-lg-0">
+                        <img src="assets/img/profile/user.png" alt="">
+                        <h6 class="mt-1">Jhone</h6>
+                        <a href=""><i class="bi bi-three-dots-vertical"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal for payment -->
+    <div class="modal fade" id="planModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Choose Your Plan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p class="text-secondary mb-3">No commitments, cancel anytime.</p>
+
+                    <div class="features mb-4">
+                        <h6 class="mb-3">What does premium include?</h6>
+                        <span><i class="bi bi-check-circle-fill text-white fs-6 me-1"></i> Watch any movie and show.</span>
+                        <span><i class="bi bi-check-circle-fill text-white fs-6 me-1"></i> Watch full length live sessions.</span>
+                        <span><i class="bi bi-check-circle-fill text-white fs-6 me-1"></i> Offline download.</span>
+                    </div>
+
+                    <div class="row mt-5">
+
+                    <!-- Daily -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="plan-card w-100">
+                            <div class="plan-card-header">
+                                <div><strong>Daily</strong> - Best for daily Entertainment</div>
+                                <div class="radio-indicator"></div>
+                            </div>
+                            <input type="radio" name="plan" value="daily">
+                            <div class="price">$2.99</div>
+                            <div class="plan-meta">
+                                <div>per Day</div>
+                                <div>Cancel anytime</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Weekly -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="plan-card w-100">
+                            <div class="plan-card-header">
+                                <div><strong>Weekly</strong> - Best for Weekly Entertainment</div>
+                                <div class="radio-indicator"></div>
+                            </div>
+                            <input type="radio" name="plan" value="daily">
+                            <div class="price">$19.99</div>
+                            <div class="plan-meta">
+                                <div>per Week</div>
+                                <div>Cancel anytime</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Monthly -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="plan-card w-100">
+                            <div class="plan-card-header">
+                                <div><strong>Monthly</strong> - Get 10% Discount</div>
+                                <div class="radio-indicator"></div>
+                            </div>
+                            <input type="radio" name="plan" value="daily">
+                            <div class="price d-flex justify-content-between">
+                                <div>
+                                    <h3><del>$299.99</del></h3>
+                                    <small class="text-muted text-secondary m-0">Before - per month</small>
+                                </div>
+                                <div>
+                                    <h3>$179.99</h3>
+                                    <small class="text-muted text-secondary m-0">Now - per month</small>
+                                </div>
+                            </div>
+                            <div class="plan-meta">
+                                <div>10% off</div>
+                                <div>Cancel anytime</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Yearly -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="plan-card w-100">
+                            <div class="plan-card-header">
+                                <div><strong>Yearly</strong> - Get 10% Discount</div>
+                                <div class="radio-indicator"></div>
+                            </div>
+                            <input type="radio" name="plan" value="daily">
+                            <div class="price d-flex justify-content-between">
+                                <div>
+                                    <h3><del>$799.99</del></h3>
+                                    <small class="text-muted text-secondary m-0">Before - per year</small>
+                                </div>
+                                <div>
+                                    <h3>$599.99</h3>
+                                    <small class="text-muted text-secondary m-0">Now - per year</small>
+                                </div>
+                            </div>
+                            <div class="plan-meta">
+                                <div>10% off</div>
+                                <div>Cancel anytime</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                    <div class="text-center mt-4">
+                        <button class="continue-btn">Continue</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- -- main content -- -->
+    <main class="" style="width: 100%; height: 100vh;">
+
+
+    </main>
+
+    
+    <footer>
+        <div class="container">
+            <div class="row gy-5">
+                <!-- Logo & Address -->
+                <div class="col-12 col-lg-4" id="midDevice">
+                    <div>
+                        <img src="assets/img/logo.png" alt="NexOra Logo" style="max-width: 180px;">
+                        <p class="mt-4">Company Address here Address<br>line 1/2, example here</p>
+                    </div>
+                    <div>
+                        <h6 class="mt-4">Social Media</h6>
+                        <div class="social-icons d-flex gap-2 mt-3">
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-twitter"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movies -->
+                <div class="col-6 col-lg-2">
+                    <h6>Movies</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Upcoming</a></li>
+                        <li class="mb-2"><a href="#">Trending</a></li>
+                        <li class="mb-2"><a href="#">New Release</a></li>
+                        <li><a href="#">Popular</a></li>
+                    </ul>
+                </div>
+
+                <!-- Shows -->
+                <div class="col-6 col-lg-2">
+                    <h6>Shows</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Trending</a></li>
+                        <li class="mb-2"><a href="#">New Release</a></li>
+                        <li><a href="#">Popular</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-6 col-lg-2">
+                    <h6>Support</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Subscription -->
+                <div class="col-6 col-lg-2">
+                    <h6>Subscription</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Plans</a></li>
+                        <li><a href="#">Features</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center mt-5">
+                <p>©2025 NexOra, All Rights Reserved</p>
+                <div class="mt-3 mt-md-0">
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+    // Plan selection highlight
+    const planCards = document.querySelectorAll('.plan-card');
+    // const aciveIcon = document.querySelector('.radio-indicator');
+    planCards.forEach(card => {
+        card.addEventListener('click', () => {
+            planCards.forEach(c => c.classList.remove('active'));
+            card.classList.add('active');
+
+            // Remove active class from all plan-cards and their radio-indicators
+            planCards.forEach(c => {
+                c.classList.remove('active');
+                const icon = c.querySelector('.radio-indicator');
+                if (icon){
+                    icon.classList.remove('active'); // null check
+                    icon.innerHTML = ''; // Remove icon if exists
+                } 
+            });
+
+            // Add active class to clicked plan-card and its radio-indicator
+            card.classList.add('active');
+            const selectedIcon = card.querySelector('.radio-indicator');
+            if (selectedIcon){
+                selectedIcon.classList.add('active');
+                selectedIcon.innerHTML = '<i class="bi bi-check-lg text-dark"></i>';
+            } 
+
+            // Check the input if exists
+            const input = card.querySelector('input');
+            if (input) input.checked = true;
+
+
+        });
+    });
+    </script>
+</body>
+</html>

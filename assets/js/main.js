@@ -169,4 +169,11 @@ $(document).ready(function () {
 
   // password icon - show 
 
-  
+
+// -- for profile dropdownElements
+  document.addEventListener("DOMContentLoaded", function(){
+  const dropdownElements = document.querySelectorAll('.dropdown-toggle');
+  dropdownElements.forEach(function(dropdownToggleEl){
+    new bootstrap.Dropdown(dropdownToggleEl);
+  });
+});

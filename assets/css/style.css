@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,900;1,700&display=swap');
 
+@font-face {
+  font-family: 'Artnoova';
+  src: url('../fonts/Artnoova-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 :root{
     --primary: #3396FF;
     --dark: #212121;
@@ -9,7 +17,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "Artnoova", sans-serif;
     box-sizing: border-box;
 }
 
@@ -426,7 +434,7 @@ nav .get-started:hover {
     right: 2%;
     transform: translateY(-50%);
 }
-.movies-page-1 .dropdown-toggle::after{
+.dropdown-toggle::after{
     border: none;
 }
 .movies-page-1 .dropdown{
@@ -453,6 +461,9 @@ nav .get-started:hover {
     background-color: #1A1A1A;
     color: #fff !important;
     padding: 5px 10px;
+    position: absolute;
+    left: auto;
+    right: 0%;
 }
 .dropdown-submenu .dropdown-menu {
     top: 0;
@@ -470,6 +481,7 @@ nav .get-started:hover {
 /* Optional: Improve submenu appearance */
 .dropdown-menu > li > a {
     white-space: nowrap;
+    border-radius: 5px !important;
 }
 .dropdown-menu .dropdown-item{
     color: #fff;
@@ -482,16 +494,19 @@ nav .get-started:hover {
 .dropdown-submenu .dropdown-menu{
     background-color: #1A1A1A;
 }
+.profile-btn .dropdown-item{
+    padding-right: 80px;
+}
 
 .movies-page-1 .movie-card {
-      background-color: #1c1c1c;
-      border-radius: 10px;
-      overflow: hidden;
-      padding: 20px 10px;
-      text-align: center;
-      margin: 5px;
-      height: auto !important;
-    }
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px 10px;
+    text-align: center;
+    margin: 5px;
+    height: auto !important;
+}
 
 .movies-page-1 .movie-card img {
       width: 100%;
@@ -661,109 +676,109 @@ input[type="range"].progress::-webkit-slider-thumb {
 /* for login modal  */
 
 /* Blur Background Overlay */
-    .modal-backdrop.show {
-      backdrop-filter: blur(5px);
-    }
+.modal-backdrop.show {
+    backdrop-filter: blur(5px);
+}
 
+.login-modal {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+}
+.modal-content{
+    background-color: #1e1e1e !important;
+    border-radius: 15px !important;
+}
+
+.login-modal .form-control {
+    background-color: #2d2d2d !important;
+    border: 1px solid #444;
+    color: #fff;
+    padding-left: 40px;
+}
+
+.login-modal .form-control:focus {
+    border-color: #007bff;
+    box-shadow: none;
+}
+
+.login-modal .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+.login-modal .form-group input{
+    border-radius: 18px;
+}
+
+.login-modal .form-group i {
+    position: absolute;
+    top: 32%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+#forgetPassModal .form-group i,
+#newPassword .form-group i,
+#newPassword .form-group i.pass-icon{
+    top: 50%;
+}
+.login-modal .form-group i.pass-icon {
+    position: absolute;
+    top: 32%;
+    left: 92%;
+    transform: translateY(-50%);
+    color: #aaa;
+    cursor: pointer;
+}
+
+.login-modal .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.login-modal .btn-login {
+    background-color: #207cff;
+    border: none;
+    border-radius: 30px;
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+}
+
+.social-icons i {
+    font-size: 20px;
+}
+
+.social-icons .btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.input-group .btn-secondary{
+    background: #2d2d2d !important;
+    border: none;
+}
+.input-group .btn-secondary:focus{
+    box-shadow: none;
+}
+
+@media (max-width: 576px) {
     .login-modal {
-      background-color: #1e1e1e;
-      border-radius: 15px;
-      padding: 30px;
-      position: relative;
+    padding: 20px;
     }
-    .modal-content{
-        background-color: #1e1e1e !important;
-        border-radius: 15px !important;
-    }
-
-    .login-modal .form-control {
-      background-color: #2d2d2d !important;
-      border: 1px solid #444;
-      color: #fff;
-      padding-left: 40px;
-    }
-
-    .login-modal .form-control:focus {
-      border-color: #007bff;
-      box-shadow: none;
-    }
-
-    .login-modal .form-group {
-      position: relative;
-      margin-bottom: 20px;
-    }
-    .login-modal .form-group input{
-        border-radius: 18px;
-    }
-
-    .login-modal .form-group i {
-      position: absolute;
-      top: 32%;
-      left: 12px;
-      transform: translateY(-50%);
-      color: #aaa;
-    }
-    #forgetPassModal .form-group i,
-    #newPassword .form-group i,
-    #newPassword .form-group i.pass-icon{
-        top: 50%;
-    }
-    .login-modal .form-group i.pass-icon {
-      position: absolute;
-      top: 32%;
-      left: 92%;
-      transform: translateY(-50%);
-      color: #aaa;
-      cursor: pointer;
-    }
-
-    .login-modal .close-btn {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      background: transparent;
-      border: none;
-      color: #fff;
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    .login-modal .btn-login {
-      background-color: #207cff;
-      border: none;
-      border-radius: 30px;
-      width: 100%;
-      padding: 10px 0;
-      color: white;
-    }
-
-    .social-icons i {
-      font-size: 20px;
-    }
-
-    .social-icons .btn {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      background-color: #2d2d2d;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-    }
-    .input-group .btn-secondary{
-        background: #2d2d2d !important;
-        border: none;
-    }
-    .input-group .btn-secondary:focus{
-        box-shadow: none;
-    }
-
-    @media (max-width: 576px) {
-      .login-modal {
-        padding: 20px;
-      }
-    }
+}
 
  /* <!-- OTP input field styling --> */
   .otp-input {
@@ -895,6 +910,13 @@ footer .footer-bottom a:hover {
     .movie-details .bg-banar{
         min-height: 40vh;
     }
+    .prefarance .card p{
+        font-size: 12px;
+    }
+    .prefarance .card .btn-primary{
+        padding: 5px 8px !important;
+        font-size: 8px !important;
+    }
 
 } 
 
@@ -933,5 +955,15 @@ footer .footer-bottom a:hover {
     }
     .movie-details h3.fw-blod{
         font-size: 22px;
+    }
+    .prefarance .card p{
+        font-size: 10px;
+    }
+    .prefarance #mobile-card{
+        height: auto !important;
+    }
+    .prefarance .form-switch{
+        padding-left: 0px !important;
+        font-size: 12px;
     }
 } 
